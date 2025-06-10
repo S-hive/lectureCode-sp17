@@ -21,23 +21,23 @@ public class SLList {
         size = 1;
     }
 
-    /** Adds an item to the front of the list. */
+    /** 将一个项目添加到列表的前面。 */
     public void addFirst(int x) {
         first = new IntNode(x, first);
         size += 1;
     }    
 
-    /** Retrieves the front item from the list. */
+    /** 从列表中检索前端项目。. */
     public int getFirst() {
         return first.item;
     }
 
-    /** Returns the number of items in the list. */
+    /** 返回列表中元素的数量。 */
     public int size() {
         return size;
     }
 
-    /** Adds an item to the end of the list. */
+    /** 将一个项目添加到列表的末尾。*/
     public void addLast(int x) {
         IntNode p = first;
 
@@ -48,7 +48,7 @@ public class SLList {
         p.next = new IntNode(x, null);
     }
 
-    /** Crashes when you call addLast on an empty SLList. Fix it. */
+    /**当你对一个空的 SLList 调用 addLast 方法时会崩溃。修复这个问题。*/
     public static void main(String[] args) {
         SLList x = new SLList();
         x.addLast(5);

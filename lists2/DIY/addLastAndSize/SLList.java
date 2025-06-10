@@ -14,24 +14,36 @@ public class SLList {
         first = new IntNode(x, null);
     }
 
-    /** Adds an item to the front of the list. */
+    /** 将一个项目添加到列表的前端。*/
     public void addFirst(int x) {
         first = new IntNode(x, first);
     }    
 
-    /** Retrieves the front item from the list. */
+    /**从列表中获取前端项。 */
     public int getFirst() {
         return first.item;
     }
 
-    /** Adds an item to the end of the list. */
+    /** 将一个项目添加到列表的末尾。*/
     public void addLast(int x) {
         /* Your Code Here! */
+        IntNode z = new IntNode(x,null);
+        IntNode p = first;
+        while (p.next != null){
+            p = p.next;
+        }
+        p.next = z;
     }
 
-    /** Returns the number of items in the list using recursion. */
+    /** 使用递归返回列表中的项目数量。 */
     public int size() {
         /* Your Code Here! */
+        int num = 0;
+        IntNode p = first;
+        while (p.next != null) {
+            p = p.next;
+            num += 1;
+        }
+        return num;
     }
-
 }
